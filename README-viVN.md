@@ -349,6 +349,24 @@ Các bản dịch cho ngôn ngữ khác đã có dưới đây:
     end
     ```
 
+* Avoid comma after the last parameter in a method call, especially when the
+  parameters are not on separate lines.
+
+    ```Ruby
+    # bad - easier to move/add/remove parameters, but still not preferred
+    some_method(
+                 size,
+                 count,
+                 color,
+               )
+
+    # bad
+    some_method(size, count, color, )
+
+    # good
+    some_method(size, count, color)
+    ```
+
 * Use spaces around the `=` operator when assigning default values to method parameters:
 
     ```Ruby
@@ -2103,6 +2121,24 @@ this rule only to arrays with two or more elements.
     STATES = %i(draft open closed)
     ```
 
+* Avoid comma after the last item of an `Array` or `Hash` literal, especially
+  when the items are not on separate lines.
+
+    ```Ruby
+    # bad - easier to move/add/remove items, but still not preferred
+    VALUES = [
+               1001,
+               2020,
+               3333,
+             ]
+
+    # bad
+    VALUES = [1001, 2020, 3333, ]
+
+    # good
+    VALUES = [1001, 2020, 3333]
+    ```
+
 * Avoid the creation of huge gaps in arrays.
 
     ```Ruby
@@ -2584,6 +2620,10 @@ community.
 
 Feel free to open tickets or send pull requests with improvements. Thanks in
 advance for your help!
+
+## How to Contribute?
+
+It's easy, just follow the [contribution guidelines](https://github.com/scrum2b/ruby-style-guide/blob/master/CONTRIBUTING.md).
 
 # License
 
