@@ -5,7 +5,7 @@
 Một điều luôn làm tôi suy nghĩ với vai trò của một Ruby coder - Các Python
 coder có một tài liệu tham khảo về phong cách viết code rất tốt 
 ([PEP-8] (http://www.python.org/dev/peps/pep-0008/)) và chúng ta, những 
-Ruby coder, vẵn chưa có một tài liệu chính thức hướng dẫ về phong cách 
+Ruby coder, vẵn chưa có một tài liệu chính thức hướng dẫn về phong cách 
 viết  Ruby cũng như những mô hình thực hành tốt nhất. 
 Và tôi tin rằng cần một phong cách viết code tốt. Tôi cũng tin rằng một
 cộng đồng lập trình lớn như cộng đồng Ruby, hẳn có đủ năng lực viết ra 
@@ -32,7 +32,7 @@ Bằng cách này, nếu bạn đang tìm hiểu Rails, bạn có thể muốn t
 Bản hướng dẫn cách viết code Ruby giới thiệu những phương án thực hành tốt nhất mà 
 các lập trình viên trong thế giới Ruby code đã viết và được cập nhật, chỉnh sửa bởi
 các thành viên khác. Bản hướng dẫn vừa đưa ra phương án sử dụng thực tế tốt nhất, 
-vừa đề cập cả những ý tưởng đã bị nhật xét là không tối ưu. Việc này sẽ giúp tránh
+vừa đề cập cả những ý tưởng đã bị nhận xét là không tối ưu. Việc này sẽ giúp tránh
 được rủi ro cho tất cả mọi người &ndash; Việc này hẳn cũng tốt đấy chứ.
 
 
