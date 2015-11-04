@@ -82,66 +82,59 @@ Các bản dịch cho ngôn ngữ khác đã có dưới đây:
 * [Các công cụ / Tools](#c%C3%A1c-c%C3%B4ng-c%E1%BB%A5--tools)
 
 ## Bố cục trình bày khi viết code / Source code layout 
+> Gần như tất cả mọi người đều bị thuyết phục bởi một điều rằng trừ phong cách của chính họ thì những phong cách 
+> viết code của người khác là lố bịch và không thể đọc được. Điều đó hẳn là chính xác nếu như bỏ đi cụm từ "ngoại trừ phong > cách của chính họ"
+> Trích -- Jerry Coffin (on indentation)
 
-> Nearly everybody is convinced that every style but their own is
-> ugly and unreadable. Leave out the "but their own" and they're
-> probably right... <br/>
-> -- Jerry Coffin (on indentation)
-
-* Use `UTF-8` as the source file encoding.
-* Use two **spaces** per indentation level (aka soft tabs). No hard tabs.
+* Sử dụng 'UTF-8' để mã hoá dữ liệu nguồn
+* Sử dụng hai **khoảng trắng** cho mỗi một lùi vào đầu dòng (được hiểu như tab ngắn). Không sử dụng 
+* các tab dài 
 
     ```Ruby
-    # bad - four spaces
+    # xấu - bốn khoảng trắng
     def some_method
         do_something
     end
 
-    # good
+    # tốt
     def some_method
       do_something
     end
     ```
 
-* Use Unix-style line endings. (*BSD/Solaris/Linux/OS X users are covered by default,
-  Windows users have to be extra careful.)
-    * If you're using Git you might want to add the following
-    configuration setting to protect your project from Windows line
-    endings creeping in:
+* Sử dụng phong cách kết thúc dòng của Unix. (*mặc định đối với người dùng trên BSD/Solaris/Linux/OS X.)
+    * Nếu bạn đang sử dụng Git, bạn có thể cần cài đặt cấu hình dưới đây để bảo vệ dự án của bạn khỏi cách kết thúc dòng từ Windows
 
     ```bash
     $ git config --global core.autocrlf true
     ```
-
-* Don't use `;` to separate statements and expressions. As a
-  corollary - use one expression per line.
+* Không sử dụng `;` để phân chia các dòng lệnh và các phát biểu. Một hệ quả tất yếu từ đó là sử dụng mỗi dòng lệnh trên mỗi dòng.
 
     ```Ruby
-    # bad
+    # xấu
     puts 'foobar'; # superfluous semicolon
 
-    puts 'foo'; puts 'bar' # two expression on the same line
+    puts 'foo'; puts 'bar' # hai dòng lệnh trên cùng một dòng
 
-    # good
+    # tốt
     puts 'foobar'
 
     puts 'foo'
     puts 'bar'
 
-    puts 'foo', 'bar' # this applies to puts in particular
+    puts 'foo', 'bar' # dòng lệnh này áp dụng trong trường hợp đặc biệt
     ```
-
-* Prefer a single-line format for class definitions with no body.
+* Nên sử dụng định dạng dòng-đơn cho việc khai báo các lớp rỗng
 
     ```Ruby
-    # bad
+    # xấu
     class FooError < StandardError
     end
 
-    # okish
+    # chấp nhận được
     class FooError < StandardError; end
 
-    # good
+    # tốt
     FooError = Class.new(StandardError)
     ```
 
